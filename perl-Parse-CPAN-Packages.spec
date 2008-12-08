@@ -13,6 +13,7 @@ Source:     http://www.cpan.org/modules/by-module/Parse/%{realname}-%{version}.t
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
+BuildRequires: perl(Compress::Zlib)
 BuildRequires: perl(CPAN::DistnameInfo)
 BuildRequires: perl(Class::Accessor::Fast)
 BuildRequires: perl(IO::Zlib)

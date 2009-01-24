@@ -17,6 +17,7 @@ BuildRequires: perl(Compress::Zlib)
 BuildRequires: perl(CPAN::DistnameInfo)
 BuildRequires: perl(Class::Accessor::Fast)
 BuildRequires: perl(IO::Zlib)
+BuildRequires: perl(Moose)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(version)
 

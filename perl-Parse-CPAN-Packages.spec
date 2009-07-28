@@ -1,18 +1,16 @@
+%define upstream_name    Parse-CPAN-Packages
+%define upstream_version 2.31
 
-%define realname   Parse-CPAN-Packages
-%define version    2.31
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Parse 02packages.details.txt.gz
-Source:     http://www.cpan.org/modules/by-module/Parse/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Compress::Zlib)
 BuildRequires: perl(CPAN::DistnameInfo)
 BuildRequires: perl(Class::Accessor::Fast)
@@ -20,8 +18,8 @@ BuildRequires: perl(IO::Zlib)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(version)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Comprehensive Perl Archive Network (CPAN) is a very useful collection
@@ -37,7 +35,7 @@ Methods
     * new
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -58,5 +56,4 @@ rm -rf %buildroot
 %doc CHANGES README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 

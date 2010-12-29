@@ -1,5 +1,5 @@
 %define upstream_name    Parse-CPAN-Packages
-%define upstream_version 2.31
+%define upstream_version 2.33
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}

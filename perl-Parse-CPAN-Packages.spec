@@ -1,15 +1,15 @@
 %define upstream_name    Parse-CPAN-Packages
-%define upstream_version 2.33
+%define upstream_version 2.38
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Parse 02packages.details.txt.gz
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Parse/Parse-CPAN-Packages-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Compress::Zlib)
@@ -83,4 +83,5 @@ make test
 
 * Mon Dec 08 2008 cpan2dist 2.29-1mdv
 - initial mdv release, generated with cpan2dist
+
 

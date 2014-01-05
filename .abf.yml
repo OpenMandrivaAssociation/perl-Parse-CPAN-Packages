@@ -1,2 +1,4 @@
+removed_sources:
+  Parse-CPAN-Packages-2.33.tar.gz: d39f86ebc7425c8f99f68a4dacacdc7ca16792ce
 sources:
-  "Parse-CPAN-Packages-2.33.tar.gz": d39f86ebc7425c8f99f68a4dacacdc7ca16792ce
+  Parse-CPAN-Packages-2.38.tar.gz: 9819d7485108fa0df6c16a03be6dc523df4610cc

@@ -1,15 +1,15 @@
 %define upstream_name    Parse-CPAN-Packages
-%define upstream_version 2.33
+%define upstream_version 2.40
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Parse 02packages.details.txt.gz
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/wchristian/parse-cpan-packages
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/Parse-CPAN-Packages-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

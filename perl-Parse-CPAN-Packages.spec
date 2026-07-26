@@ -1,15 +1,13 @@
 %define upstream_name    Parse-CPAN-Packages
-%define upstream_version 2.40
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.40
+Release:	2
 
 Summary:	Parse 02packages.details.txt.gz
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/wchristian/parse-cpan-packages
-Source0:	https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/Parse-CPAN-Packages-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/Parse-CPAN-Packages-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -36,7 +34,7 @@ Methods
     * new
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -64,8 +62,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 2.310.0-1mdv2010.0
 + Revision: 401618
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %2.40 fixed license field
 
 * Fri May 01 2009 Jérôme Quelin <jquelin@mandriva.org> 2.31-1mdv2010.0
 + Revision: 369666
